@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :articles
+
   get 'static/category'
 
   get 'static/article'
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
 
   get 'static/profile'
 
-  root 'static#index'
+  root 'articles#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
