@@ -1,0 +1,113 @@
+<div class="container-fluid post-form">
+  <div class="row">
+    <div class="col-md-7 col-md-offset-1">
+
+      <div class="form-group">
+        <label>Photos</label>
+        <div class="row photo-uploads">
+
+          <div class="col-md-3">
+            <div class="panel panel-default text-center">
+              <div class="panel-body">
+                <label for="post_photo_1">
+                  <img src="<%=image_url('add_photo_icon.png')%>" class="photo-placeholder">
+                  Photo 1
+                  <input type="file" id="post_photo_1"></input>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="panel panel-default text-center">
+              <label for="post_photo_2">
+                <img src="<%=image_url('add_photo_icon.png')%>" class="photo-placeholder">
+                Photo 2
+                <input type="file" id="post_photo_2"></input>
+              </label>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="panel panel-default text-center">
+              <label for="post_photo_3">
+                <img src="<%=image_url('add_photo_icon.png')%>" class="photo-placeholder">
+                Photo 3
+                <input type="file" id="post_photo_3"></input>
+              </label>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="panel panel-default text-center">
+              <label for="post_photo_3">
+                <img src="<%=image_url('add_photo_icon.png')%>" class="photo-placeholder">
+                Photo 4
+                <input type="file" id="post_photo_4"></input>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="post_title">Title</label>
+        <input type="text" class="form-control" id="post_title"></input>
+      </div>
+
+      <div class="form-group">
+        <label>Content</label>
+        <textarea class="form-control" rows="10"></textarea>
+      </div>
+
+      <div class="form-group">
+        <div class="pull-left">
+          <a href="#">Delete Post</a>
+        </div>
+        <div class="pull-right">
+          <div class="pull-left">
+            <a href="#">Cancel</a>
+          </div>
+          <input type="button" name="Submit" class="btn btn-primary" value="Submit">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      
+      <label>Category</label>
+
+      <label for="post_category_tech" class="post-category">
+        <input type="radio" name="post_category" id="post_category_tech"/>
+        <img src="<%=image_url('cat_tech.png')%>" class="img-responsive">
+      </label>
+
+      <label for="post_category_finance" class="post-category">
+        <input type="radio" name="post_category" id="post_category_finance"/>
+        <img src="<%=image_url('cat_finance.png')%>" class="img-responsive">
+      </label>
+
+      <label for="post_category_art" class="post-category">
+        <input type="radio" name="post_category" id="post_category_art"/>
+        <img src="<%=image_url('cat_art.png')%>" class="img-responsive">
+      </label>
+
+      <label for="post_category_music" class="post-category">
+        <input type="radio" name="post_category" id="post_category_music"/>
+        <img src="<%=image_url('cat_music.png')%>" class="img-responsive">
+      </label>
+
+      <label for="post_category_food" class="post-category">
+        <input type="radio" name="post_category" id="post_category_food"/>
+        <img src="<%=image_url('cat_food.png')%>" class="img-responsive">
+      </label>
+
+      <label for="post_category_culture" class="post-category">
+        <input type="radio" name="post_category" id="post_category_culture"/>
+        <img src="<%=image_url('cat_culture.png')%>" class="img-responsive">
+      </label>
+
+
+    </div>
+  </div>
+</div>

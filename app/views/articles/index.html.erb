@@ -1,0 +1,58 @@
+<div class="container-fluid text-center">
+
+
+  <%= render "static/account_nav" %>
+
+  <%= render "static/category_nav" %>
+
+  <div class="row homepage_nav">
+    <div class="col-xs-2 control">
+      <img src="<%= image_url "left_carousel.png" %>" class="img-responsive">
+    </div>
+
+    <div class="col-xs-8">
+      <img src="<%= image_url "chair_carousel.png" %>" class="img-responsive">
+    </div>
+
+    <div class="col-xs-2 control">
+      <img src="<%= image_url "right_carousel.png" %>" class="img-responsive">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1>Latest Articles</h1>
+
+      <hr>
+
+      <% 5.times do %>
+        <div class="row homepage_article text-left">
+          <div class="col-md-3">
+            <img src="http://placehold.it/400x300" class="img-responsive">
+          </div>
+          <div class="col-md-9">
+            <h2 class="title">Nasa announces plans to launch chimpanzee into sun</h2>
+            <p class="byline">by Beverly T Miller // 8.1.2014</p>
+            <p class="summary">Pickled bicycle rights viral Neutra Echo Park. Bespoke sriracha Brooklyn jean shorts VHS artisan, next level Wes Anderson Williamsburg flexitarian gentrify. Master cleanse Godard lo-fi, +1 butcher hashtag meh Intelligentsia lomo slow-carb brunch.</p>
+          </div>
+        </div>
+
+        <hr>
+      <% end %>
+
+      <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <%= render "static/ourfooter" %>
+</div>
