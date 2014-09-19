@@ -1,39 +1,48 @@
 <div class="row category_nav">
-  <div class="col-md-2 logo"><img src="<%= image_url "daft_logo.png" %>" class="img-responsive"/></div>
+
+  <div class="col-md-2 logo">
+    <%= link_to root_path do %>
+    <img src="<%= image_url "daft_logo.png" %>" class="img-responsive"/></div>
+    <% end %>
+
 
   <div class="col-md-8 col-md-offset-1">
-    
-    <div class="row category-list">
 
-      <div class="col-md-2 category-item active category-tech">
-        <a href="#"><img src="<%= image_url "nav_tech.png" %>" class="img-responsive"/></a>
+    <div class="row category-list    <%= @category %>   ">
+
+      <div class="col-md-2 category-item category-tech">
+        <%= link_to category_path('tech') do %>
+        <img src="<%= image_url "nav_tech.png" %>" class="img-responsive"/>
+        <% end %>
       </div>
-      
+
       <div class="col-md-2 category-item category-finance">
-        <a href="#"><img src="<%= image_url "nav_finance.png" %>" class="img-responsive"/></a>
+        <a href="/category/finance"><img src="<%= image_url "nav_finance.png" %>" class="img-responsive"/>
+        </a>
       </div>
-      
+
       <div class="col-md-2 category-item category-art">
-        <a href="#"><img src="<%= image_url "nav_art.png" %>" class="img-responsive"/></a>
+        <a href="/category/art"><img src="<%= image_url "nav_art.png" %>" class="img-responsive"/></a>
       </div>
-      
+
       <div class="col-md-2 category-item category-music">
-        <a href="#"><img src="<%= image_url "nav_music.png" %>" class="img-responsive"/></a>
+        <a href="/category/music"><img src="<%= image_url "nav_music.png" %>" class="img-responsive"/></a>
       </div>
-      
+
       <div class="col-md-2 category-item category-food">
-        <a href="#"><img src="<%= image_url "nav_food.png" %>" class="img-responsive"/></a>
+        <a href="/category/food"><img src="<%= image_url "nav_food.png" %>" class="img-responsive"/></a>
       </div>
-      
+
       <div class="col-md-2 category-item category-culture">
-        <a href="#"><img src="<%= image_url "nav_culture.png" %>" class="img-responsive"/></a>
+        <a href="/category/culture"><img src="<%= image_url "nav_culture.png" %>" class="img-responsive"/></a>
       </div>
-      
+
     </div>
-    
+
 
   </div>
 
 </div> <!-- category_nav -->
+
 
 <div class="category-nav-stripes row"></div>

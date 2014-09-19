@@ -1,21 +1,20 @@
 <div class="col-md-8 latest">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
-      <h1 class="tech">Latest Articles in Tech</h1>
+      <h1 class= "<%= @category %>" Latest Articles in <%= @category.capitalize %></h1>
     </div>
   </div>
 
-  <% 6.times do %>
+  <% @category_articles.each do |article| %>
     <div class="row article_row">
       <div class="col-md-3 col-md-offset-1">
         <img src="http://placehold.it/500x500" class="img-responsive"/>
       </div>
       <div class="col-md-7">
-        <h2>Nasa announces plans to launch chimp into sun</h2>
+        <h2><%= link_to article.title, article_path(article) %></h2>
 
-        <p class="byline">by Beverly Miller // 8.12.14</p>
-
-        <p>All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. </p>
+        <p class="byline">by<%= article.author %> // <% article.created_at.to_date %></p>
+        <p><%= truncate( article.content, length: 300, separator: ' ' ) %> </p>
       </div>
     </div>
 
@@ -37,5 +36,3 @@
     </div>
   </div>
 </div>
-
-

@@ -1,2 +1,63 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<div class="container-fluid">
+  <%= render "static/account_nav" %>
+
+  <%= render "static/category_nav" %>
+
+  <div class="row category_index">
+    <div class="col-md-8 article">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="row">
+            <div class="col-md-12">
+              <img src="http://placehold.it/1000x700" class="img-responsive"/>
+            </div>
+          </div>
+
+          <div class="row thumbnailrow">
+            <div class="col-xs-3">
+              <img src="http://placehold.it/300x150" class="img-responsive"/>
+            </div>
+            <div class="col-xs-3">
+              <img src="http://placehold.it/300x150" class="img-responsive"/>
+            </div>
+            <div class="col-xs-3">
+              <img src="http://placehold.it/300x150" class="img-responsive"/>
+            </div>
+            <div class="col-xs-3">
+              <img src="http://placehold.it/300x150" class="img-responsive"/>
+            </div>
+          </div>
+          <h1><%= @article.title %></h1>
+
+          <%= link_to 'Edit', edit_article_path(@article) %>
+
+
+          <p class="byline">By <% @article.author %></p>
+          <%= simple_format(@article.content) %>
+
+
+
+        </div>
+      </div>
+      <div class="row about_author">
+        <div class="col-md-10 col-md-offset-1">
+          <h1><span>About author</span></h1>
+        </div>
+      </div>
+
+      <div class="row about_author">        
+        <div class="col-md-1">
+          <img src="http://placehold.it/100x100" class="img-responsive avatar"/>
+        </div>
+        <div class="col-md-10">
+          <p>
+            Proin eleifend, felis nec dapibus aliquam, lectus neque tincidunt justo, et pulvinar felis enim non mi. Morbi dictum mollis lorem, rhoncus varius magna tempor id. Aliquam interdum, lacus a venenatis laoreet, velit ipsum sollicitudin nibh, quis iaculis lectus lacus at quam. Ut convallis arcu et maximus dictum. Proin a massa in tortor mollis iaculis. Donec sed malesuada ligula. Quisque eget nulla vel est malesuada vehicula. Curabitur volutpat ultrices risus, eget fermentum massa euismod eget. Sed vel porttitor sapien. Praesent ornare metus nulla, at dapibus justo fermentum eu. Pellentesque non lobortis ex. Integer semper, odio et luctus feugiat, nibh mauris varius neque, quis auctor orci nulla nec leo. Mauris vitae ante sed ipsum viverra scelerisque. Aliquam et pharetra eros. Duis laoreet pretium lacus non congue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+      </div>
+    </div>
+    <%= render "breaking" %>
+  </div> <!-- category_index -->
+
+  <%= render "static/ourfooter" %>
+</div>

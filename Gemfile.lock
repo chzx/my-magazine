@@ -69,6 +69,7 @@ GEM
     happy_seed (0.0.8)
       rails (~> 4.1.4)
     hike (1.2.3)
+    hirb (0.7.2)
     httparty (0.13.1)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -200,6 +201,7 @@ DEPENDENCIES
   factory_girl_rails
   gibbon
   happy_seed
+  hirb
   httparty
   jbuilder (~> 2.0)
   jquery-rails

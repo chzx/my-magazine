@@ -70,36 +70,37 @@
     }
   }
 
+.category-list.tech .category-tech{
+  border-bottom: 15px #50cfaa;
+}
+
+.category-list.finance .category-finance{
+  border-bottom: 15px solid yellow;
+}
+
+.category-list.art .category-art{
+  border-bottom: 15px solid purple;
+}
+
+.category-list.music .category-music{
+  border-bottom: 15px solid blue;
+}
+
+.category-list.food .category-food{
+  border-bottom: 15px solid yellow;
+}
+
+.category-list.culture .category-culture{
+  border-bottom: 15px solid red;
+}
+
+
   .category-list {
     .category-item {
 
       height: 120px;
       text-align: center;
 
-      &.active {
-
-        border-bottom-width: 15px;
-        border-bottom-style: solid;
-
-        &.category-tech {
-          border-bottom-color: #50cfaa;
-        }
-        &.category-finance {
-          border-bottom-color: green;
-        }
-        &.category-art {
-          border-bottom-color: purple;
-        }
-        &.category-music {
-          border-bottom-color: blue;
-        }
-        &.category-food {
-          border-bottom-color: yellow;
-        }
-        &.category-culture {
-          border-bottom-color: red;
-        }
-      }
 
       a {
         padding-top: 30px;
@@ -153,7 +154,7 @@
     margin-top: 25px;
 
 
-    &.tech, &.culture {
+    &.tech, &.culture, &.music, &.finance, &.art, &.food {
       background-repeat: no-repeat;
       background-size: 30px 30px;
       padding-left: 45px;
@@ -161,6 +162,10 @@
 
     &.tech    { background-image: image-url( "badge_tech.png" );    }
     &.culture { background-image: image-url( "badge_culture.png" ); }
+    &.music   { background-image: image-url( "badge_music.png" );   }
+    &.finance { background-image: image-url( "badge_finance.png" ); }
+    &.food    { background-image: image-url( "badge_food.png" );    }
+    &.art     { background-image: image-url( "badge_art.png" );     }
   }
 
   .article_row {
@@ -216,6 +221,15 @@
     .about_author {
       background: #50cfaa;
       color: white;
+
+
+      &.tech    { background-color:green; }
+      &.culture { background-color: red;}
+      &.music   { background-image: blue;  }
+      &.finance { background-image: green; }
+      &.food    { background-image: yellow;   }
+      &.art     { background-image: purple;    }
+
 
       h1 {
         margin-top: 0;
@@ -331,6 +345,11 @@
       height: 25px;
     }
   }
+}
 
 
+.field_with_errors{
+  input, textarea{
+    border: 1px solid red;
+  }
 }
