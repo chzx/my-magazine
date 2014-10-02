@@ -1,15 +1,22 @@
 <div class="row ourfooter">
   <div class="col-md-12">
+    <%= link_to root_path do %>
     <img src="<%= image_url "daft_logo_footer.png" %>">
+    <% end %>
 
-    <h2>Join our mailing list for Daft News!</h2>
-    <form class="form-inline">
-      <input type="text" name="username" placeholder="Username" class="form-control"/>
-      <input type="password" name="password" placeholder="Password" class="form-control"/>
-      <input type="submit" value="sign in" class="btn btn-primary"/>
-    </form>
+    <h2 id = 'mailing-list-signup-heading'>Join our mailing list for Daft News!</h2>
+
+    <%= form_tag mailing_list_sign_up_path, :class=> 'form-inline', :id=> 'foot', :remote=>true do %>
+    <%= text_field_tag :name, '', :placeholder=>'Name', :class=> 'form-control' %>
+    <%= text_field_tag :email, '', :placeholder=>'Email', :class=> 'form-control' %>
+
+    <%= submit_tag 'Sign Up', :class=> 'btn btn-primary', :remote=>true  %>
+
+    <% end %>
 
 
-    <p>Copyright 2014, all rights reserved</p>
+
+
+    <p>&copy; 2014, all rights reserved</p>
   </div>
 </div>

@@ -7,14 +7,21 @@
   </div>
 
   <div class="col-md-6 col-md-offset-2">
-    <form class="form-inline pull-right">
+    <!--form class="form-inline pull-right"-->
 
-      <%= link_to( 'Create Article', new_article_path ) %>
+  <%= form_tag sessions_path, :class=>'form-inline pull-right' do |f| %>
 
-      <input type="text" name="username" placeholder="Username" class="form-control" autocomplete="off"/>
+    <% if user_signed_in? %>
+      <div class='pull-right'>
+      <%= current_user.email %>
+      <%= link_to( 'Sign out', sessions_destroy_path, :class => 'btn btn-primary' ) %>
 
+      <%= link_to( 'Create Article', new_article_path, :class=> 'btn btn-default' ) %>
+    </div>
+    <% else %>
+      <%= text_field_tag :email, '', :class=>'form-control', :placeholder=>'Your Email' %>
       <div class="input-group">
-        <input type="password" name="password" placeholder="Password" class="form-control" autocomplete="off"/>
+      <%= text_field_tag :password, '', :class=>'form-control', :placeholder=>'Your Password' %>
         <span class="input-group-btn">
           <button class="btn btn-default" type="button">
             <span class="circle">
@@ -24,7 +31,10 @@
         </span>
       </div>
 
-      <input type="submit" value="sign in" class="btn btn-primary"/>
+  <%= submit_tag 'Log In', :class=>'btn btn-primary' %>
+        <% end %>
+      <% end %>
+
     </form>
   </div>
 </div> <!-- Account Nav -->

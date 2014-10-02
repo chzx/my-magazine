@@ -2,6 +2,14 @@ Rails.application.routes.draw do
 
   resources :articles
 
+  resource :sessions
+
+  post "mailing_list/sign_up"
+
+  post "/sessions/create" => "sessions#create"
+
+  get "sessions/destroy" => "sessions#destroy"
+
   get 'category/:category' => 'articles#category', :as=>:category
 
   get 'static/category'

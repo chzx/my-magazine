@@ -7,7 +7,7 @@
 
     <div class="col-md-8">
       <p><%= link_to breaking_headline.title, article_path(breaking_headline) %></p>
-      <p class="byline"><%= breaking_headline.author %> // <%= breaking_headline.created_at.to_date %></p>
+      <p class="byline"><%= breaking_headline.user.first_name + " " + breaking_headline.user.last_name %> // <%= breaking_headline.created_at.to_date %></p>
     </div>
   </div>
 

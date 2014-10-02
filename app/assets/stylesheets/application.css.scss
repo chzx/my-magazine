@@ -22,6 +22,14 @@
     text-transform: uppercase;
   }
 
+  .btn {
+    border-radius: 0;
+    border: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    height: 30px;
+  }
+
   .form-inline {
 
     input.form-control {
@@ -36,13 +44,6 @@
       height: 34px;
     }
 
-    .btn {
-      border-radius: 0;
-      border: none;
-      text-transform: uppercase;
-      font-size: 10px;
-      height: 34px;
-    }
 
     .input-group button {
       background-color: #444;
@@ -71,11 +72,11 @@
   }
 
 .category-list.tech .category-tech{
-  border-bottom: 15px #50cfaa;
+  border-bottom: 15px solid #50cfaa;
 }
 
 .category-list.finance .category-finance{
-  border-bottom: 15px solid yellow;
+  border-bottom: 15px solid green;
 }
 
 .category-list.art .category-art{

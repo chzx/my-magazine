@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id] )
-
+    @author = @article.user
     @category = @article.category
   end
 
@@ -15,6 +15,13 @@ class ArticlesController < ApplicationController
   end
 
   def new
+
+    if not user_signed_in?
+      redirect_to root_path
+      flash[:notice] = "You must be logged into create an article"
+      return
+    end
+
     @article = Article.new
   end
 
@@ -32,8 +39,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @homepage_article_items = Article.all.order('created_at desc').limit(3)
-
+    @homepage_article_items = Article.order('created_at desc').paginate(:page => params[:page]).limit(5)
   end
 
   def destroy

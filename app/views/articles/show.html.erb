@@ -32,7 +32,7 @@
           <%= link_to 'Edit', edit_article_path(@article) %>
 
 
-          <p class="byline">By <% @article.author %></p>
+          <p class="byline">By <%= @author.first_name + " " + @author.last_name %> </p>
           <%= simple_format(@article.content) %>
 
 
@@ -45,13 +45,13 @@
         </div>
       </div>
 
-      <div class="row about_author">        
+      <div class="row about_author">
         <div class="col-md-1">
           <img src="http://placehold.it/100x100" class="img-responsive avatar"/>
         </div>
         <div class="col-md-10">
           <p>
-            Proin eleifend, felis nec dapibus aliquam, lectus neque tincidunt justo, et pulvinar felis enim non mi. Morbi dictum mollis lorem, rhoncus varius magna tempor id. Aliquam interdum, lacus a venenatis laoreet, velit ipsum sollicitudin nibh, quis iaculis lectus lacus at quam. Ut convallis arcu et maximus dictum. Proin a massa in tortor mollis iaculis. Donec sed malesuada ligula. Quisque eget nulla vel est malesuada vehicula. Curabitur volutpat ultrices risus, eget fermentum massa euismod eget. Sed vel porttitor sapien. Praesent ornare metus nulla, at dapibus justo fermentum eu. Pellentesque non lobortis ex. Integer semper, odio et luctus feugiat, nibh mauris varius neque, quis auctor orci nulla nec leo. Mauris vitae ante sed ipsum viverra scelerisque. Aliquam et pharetra eros. Duis laoreet pretium lacus non congue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <%= @author.bio %>
           </p>
         </div>
       </div>

@@ -69,3 +69,5 @@ gem "meta-tags", require: "meta_tags"
 gem "gibbon"
 
 gem "hirb"
+
+gem 'will_paginate-bootstrap'
